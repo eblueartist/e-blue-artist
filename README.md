@@ -29,6 +29,8 @@ Push to the `main` branch of [eblueartist/e-blue-artist](https://github.com/eblu
 ├── posts/              Individual blog posts
 ├── css/style.css       Nautical theme styles
 ├── js/main.js          Mobile navigation
-├── assets/logo.png     Site logo
+├── assets/logo.png              Site logo
+├── assets/hero.png              Hero banner image
+├── scripts/make_hero_slices.py  Optional — regenerate sliced hero from a base image
 └── CNAME               Custom domain config
 ```

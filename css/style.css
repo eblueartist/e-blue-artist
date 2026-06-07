@@ -1,12 +1,13 @@
 :root {
   --ink: #0a1628;
   --navy: #1a2d4a;
-  --muted: #6b7280;
-  --line: #e4e4e7;
-  --canvas: #fafaf9;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --canvas: #f8f6f3;
+  --cream: #f0ebe3;
   --white: #ffffff;
-  --accent: #2b5ea8;
-  --radius: 0;
+  --accent: #3b6ea5;
+  --radius: 2px;
 }
 
 *,
@@ -136,64 +137,67 @@ a:hover {
 /* ── Hero ── */
 
 .hero {
-  padding: 4.5rem 1.75rem 3.5rem;
-  text-align: center;
-  background: var(--canvas);
-  border-bottom: 1px solid var(--line);
+  background: var(--ink);
 }
 
-.hero-inner {
-  max-width: 640px;
+.hero-visual {
+  position: relative;
+  max-width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+.hero-art {
+  width: 100%;
+  height: clamp(280px, 42vw, 480px);
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.75rem;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 22, 40, 0.35) 0%,
+    rgba(10, 22, 40, 0.2) 50%,
+    rgba(10, 22, 40, 0.55) 100%
+  );
 }
 
 .hero-logo {
-  width: 168px;
-  height: 168px;
+  width: 88px;
+  height: 88px;
   object-fit: contain;
-  margin: 0 auto 2rem;
+  margin-bottom: 1.25rem;
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.3));
 }
 
 .hero h1 {
   font-family: "Fraunces", Georgia, serif;
-  font-size: clamp(2.25rem, 5.5vw, 3.25rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.15;
-  margin-bottom: 1rem;
-  color: var(--ink);
+  margin-bottom: 0.75rem;
+  color: var(--white);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+  max-width: 560px;
 }
 
 .hero p {
-  font-size: 1.125rem;
-  color: var(--muted);
-  max-width: 480px;
-  margin: 0 auto;
-  line-height: 1.65;
-}
-
-.hero-rule {
-  width: 48px;
-  height: 1px;
-  background: var(--ink);
-  margin: 2rem auto 0;
-  opacity: 0.25;
-}
-
-/* ── Nautical accent line ── */
-
-.nautical-line {
-  display: block;
-  width: 100%;
-  height: 6px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--ink) 0,
-    var(--ink) 8px,
-    transparent 8px,
-    transparent 16px
-  );
-  opacity: 0.06;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 440px;
+  line-height: 1.6;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
 
 /* ── Sections ── */
@@ -248,37 +252,43 @@ a:hover {
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  border: 1px solid var(--line);
-  background: var(--line);
+  gap: 1.5rem;
 }
 
 .blog-card {
   background: var(--white);
   display: flex;
   flex-direction: column;
-  transition: background 0.2s;
+  border: 1px solid var(--line);
+  transition: box-shadow 0.25s, transform 0.25s;
 }
 
 .blog-card:hover {
-  background: var(--canvas);
+  box-shadow: 0 12px 40px rgba(10, 22, 40, 0.08);
+  transform: translateY(-3px);
 }
 
 .blog-card__image {
   aspect-ratio: 4 / 3;
-  background: var(--ink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   overflow: hidden;
-  border-bottom: 1px solid var(--line);
+  text-decoration: none;
 }
 
-.blog-card__image svg {
-  width: 70%;
-  height: 70%;
-  opacity: 0.85;
+.blog-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
+
+.blog-card:hover .blog-card__image img {
+  transform: scale(1.04);
+}
+
+.blog-card__image .crop-left { object-position: 20% center; }
+.blog-card__image .crop-center { object-position: 50% center; }
+.blog-card__image .crop-right { object-position: 80% center; }
 
 .blog-card__body {
   padding: 1.75rem;
@@ -560,12 +570,13 @@ a:hover {
     margin-right: auto;
   }
 
-  .hero {
-    padding: 3rem 1.75rem 2.5rem;
+  .hero-art {
+    height: 260px;
   }
 
   .hero-logo {
-    width: 140px;
-    height: 140px;
+    width: 72px;
+    height: 72px;
   }
+
 }
