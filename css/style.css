@@ -290,6 +290,12 @@ a:hover {
 .blog-card__image .crop-center { object-position: 50% center; }
 .blog-card__image .crop-right { object-position: 80% center; }
 
+.blog-card__image--chart img {
+  object-fit: contain;
+  background: var(--canvas);
+  padding: 1rem;
+}
+
 .blog-card__body {
   padding: 1.75rem;
   flex: 1;
@@ -440,6 +446,24 @@ a:hover {
 .post-content p {
   margin-bottom: 1.25rem;
   color: var(--ink);
+}
+
+.post-figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.post-figure img {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.post-figure figcaption {
+  margin-top: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 .post-content ul,
