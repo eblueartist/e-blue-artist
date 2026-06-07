@@ -1,10 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>E Blue Artist</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E Blue Artist — Art Supplies, Tips &amp; Artist Features</title>
+  <meta name="description" content="Art material recommendations, simple art tips for beginners, and interesting artist spotlights.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Welcome to E Blue Artist</h1>
-  <p>Art supplies, artist features, and useful art tips for beginners.</p>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="e blue artist logo" width="48" height="48">
+        <div>
+          <div class="brand-text">e blue artist</div>
+          <div class="brand-tag">Art n craft</div>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="site-nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#journal">Journal</a></li>
+        <li><a href="#materials">Materials</a></li>
+        <li><a href="#tips">Tips</a></li>
+        <li><a href="#artists">Artists</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <img src="assets/logo.png" alt="e blue artist" class="hero-logo">
+      <h1>Art supplies, tips &amp; artists</h1>
+      <p>Honest material recommendations, simple techniques for beginners, and stories of artists who inspire us to create.</p>
+      <div class="hero-rule" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <div class="nautical-line" aria-hidden="true"></div>
+
+  <section class="section" id="journal">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Journal</span>
+        <h2>Latest posts</h2>
+        <p>Practical guides and inspiration for your creative journey.</p>
+      </div>
+
+      <div class="blog-grid">
+
+        <article class="blog-card" id="materials">
+          <div class="blog-card__image">
+            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="200" height="150" fill="#0a1628"/>
+              <circle cx="55" cy="68" r="22" fill="#3d5a80" opacity="0.7"/>
+              <circle cx="100" cy="62" r="22" fill="#5c7a9e" opacity="0.8"/>
+              <circle cx="145" cy="68" r="22" fill="#8ba4c4" opacity="0.9"/>
+            </svg>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">Materials</span>
+            <h3><a href="posts/watercolour-starter-kit.html">5 Watercolour Supplies Every Beginner Needs</a></h3>
+            <p>A no-fuss starter kit — the paints, paper, and brushes that actually make learning enjoyable.</p>
+            <span class="blog-card__meta">June 2026 · 5 min read</span>
+            <a href="posts/watercolour-starter-kit.html" class="read-more">Read article</a>
+          </div>
+        </article>
+
+        <article class="blog-card" id="tips">
+          <div class="blog-card__image">
+            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="200" height="150" fill="#0a1628"/>
+              <path d="M35 110 L68 45 L100 78 L132 38 L165 110" fill="none" stroke="#8ba4c4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">Art Tips</span>
+            <h3><a href="posts/daily-sketch-habit.html">Three Quick Sketch Habits to Build Confidence</a></h3>
+            <p>Small daily practices that help beginners loosen up and see more — no talent required.</p>
+            <span class="blog-card__meta">June 2026 · 4 min read</span>
+            <a href="posts/daily-sketch-habit.html" class="read-more">Read article</a>
+          </div>
+        </article>
+
+        <article class="blog-card" id="artists">
+          <div class="blog-card__image">
+            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="200" height="150" fill="#0a1628"/>
+              <path d="M0 95 Q50 75 100 90 T200 82 L200 150 L0 150 Z" fill="#1a2d4a"/>
+              <path d="M0 105 Q50 90 100 102 T200 94 L200 150 L0 150 Z" fill="#3d5a80" opacity="0.6"/>
+              <circle cx="100" cy="42" r="14" fill="none" stroke="#8ba4c4" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="blog-card__body">
+            <span class="blog-card__tag">Artist Spotlight</span>
+            <h3><a href="posts/hokusai-great-wave.html">Katsushika Hokusai — Master of the Wave</a></h3>
+            <p>How a Japanese printmaker captured the power of the sea and changed art forever.</p>
+            <span class="blog-card__meta">June 2026 · 6 min read</span>
+            <a href="posts/hokusai-great-wave.html" class="read-more">Read article</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="about">
+    <div class="section-inner about-strip">
+      <img src="assets/logo.png" alt="e blue artist emblem" class="about-strip__logo">
+      <div>
+        <h2>About</h2>
+        <p>E Blue Artist is a small journal about making art feel approachable. We share the supplies we actually use, techniques that work for beginners, and artists whose work is worth knowing.</p>
+        <p>Think of it as a calm harbour for creativity — practical, unpretentious, and always curious.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 <a href="https://www.e-blue-artist.com">E Blue Artist</a></p>
+    <p><a href="https://github.com/eblueartist/e-blue-artist">GitHub</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
