@@ -8,6 +8,16 @@
   --white: #ffffff;
   --accent: #3b6ea5;
   --radius: 2px;
+  /* Pasture category colours */
+  --tag-materials: #7d8f6a;
+  --tag-materials-bg: #eef2e8;
+  --tag-materials-text: #4a5a3f;
+  --tag-tips: #b8956b;
+  --tag-tips-bg: #f5efe3;
+  --tag-tips-text: #6b5438;
+  --tag-artist: #9a7d72;
+  --tag-artist-bg: #f3ece8;
+  --tag-artist-text: #5c4842;
 }
 
 *,
@@ -261,7 +271,32 @@ a:hover {
   flex-direction: column;
   border: 1px solid var(--line);
   transition: box-shadow 0.25s, transform 0.25s;
+  position: relative;
+  overflow: hidden;
 }
+
+.blog-card--materials { border-top: 3px solid var(--tag-materials); }
+.blog-card--tips { border-top: 3px solid var(--tag-tips); }
+.blog-card--artist { border-top: 3px solid var(--tag-artist); }
+
+.blog-card--materials::after,
+.blog-card--tips::after,
+.blog-card--artist::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 22px 22px 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.blog-card--materials::after { border-color: transparent var(--tag-materials) transparent transparent; }
+.blog-card--tips::after { border-color: transparent var(--tag-tips) transparent transparent; }
+.blog-card--artist::after { border-color: transparent var(--tag-artist) transparent transparent; }
 
 .blog-card:hover {
   box-shadow: 0 12px 40px rgba(10, 22, 40, 0.08);
@@ -308,8 +343,28 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--muted);
   margin-bottom: 0.75rem;
+  display: inline-block;
+  padding: 0.3rem 0.55rem 0.3rem 0.45rem;
+  border-left: 3px solid transparent;
+}
+
+.tag-materials {
+  color: var(--tag-materials-text);
+  background: var(--tag-materials-bg);
+  border-left-color: var(--tag-materials);
+}
+
+.tag-tips {
+  color: var(--tag-tips-text);
+  background: var(--tag-tips-bg);
+  border-left-color: var(--tag-tips);
+}
+
+.tag-artist {
+  color: var(--tag-artist-text);
+  background: var(--tag-artist-bg);
+  border-left-color: var(--tag-artist);
 }
 
 .blog-card h3 {
@@ -407,8 +462,28 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--muted);
   margin-bottom: 1rem;
+  display: inline-block;
+  padding: 0.35rem 0.65rem 0.35rem 0.5rem;
+  border-left: 3px solid transparent;
+}
+
+.post-hero .tag-materials {
+  color: var(--tag-materials-text);
+  background: var(--tag-materials-bg);
+  border-left-color: var(--tag-materials);
+}
+
+.post-hero .tag-tips {
+  color: var(--tag-tips-text);
+  background: var(--tag-tips-bg);
+  border-left-color: var(--tag-tips);
+}
+
+.post-hero .tag-artist {
+  color: var(--tag-artist-text);
+  background: var(--tag-artist-bg);
+  border-left-color: var(--tag-artist);
 }
 
 .post-hero h1 {
