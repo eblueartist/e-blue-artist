@@ -257,6 +257,89 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
+/* ── Category pages ── */
+
+.category-hero {
+  padding: 3.5rem 1.75rem 2.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.category-hero--materials {
+  background: var(--tag-materials-bg);
+  border-top: 3px solid var(--tag-materials);
+}
+
+.category-hero--tips {
+  background: var(--tag-tips-bg);
+  border-top: 3px solid var(--tag-tips);
+}
+
+.category-hero--artist {
+  background: var(--tag-artist-bg);
+  border-top: 3px solid var(--tag-artist);
+}
+
+.category-hero .post-tag {
+  margin-bottom: 1rem;
+}
+
+.category-hero h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+.category-hero p {
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.category-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.category-link {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.45rem 0.85rem;
+  border-left: 3px solid transparent;
+  transition: opacity 0.2s;
+}
+
+.category-link:hover {
+  opacity: 0.85;
+}
+
+.category-link.tag-materials {
+  color: var(--tag-materials-text);
+  background: var(--tag-materials-bg);
+  border-left-color: var(--tag-materials);
+}
+
+.category-link.tag-tips {
+  color: var(--tag-tips-text);
+  background: var(--tag-tips-bg);
+  border-left-color: var(--tag-tips);
+}
+
+.category-link.tag-artist {
+  color: var(--tag-artist-text);
+  background: var(--tag-artist-bg);
+  border-left-color: var(--tag-artist);
+}
+
 /* ── Blog grid (editorial cards) ── */
 
 .blog-grid {
