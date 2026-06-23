@@ -9,15 +9,15 @@
   --accent: #3b6ea5;
   --radius: 2px;
   /* Pasture category colours */
-  --tag-materials: #7d8f6a;
-  --tag-materials-bg: #eef2e8;
-  --tag-materials-text: #4a5a3f;
-  --tag-tips: #b8956b;
-  --tag-tips-bg: #f5efe3;
-  --tag-tips-text: #6b5438;
-  --tag-artist: #9a7d72;
-  --tag-artist-bg: #f3ece8;
-  --tag-artist-text: #5c4842;
+  --tag-materials: #5f8f52;
+  --tag-materials-bg: #e8f2e4;
+  --tag-materials-text: #385030;
+  --tag-tips: #5a85a8;
+  --tag-tips-bg: #e6eef5;
+  --tag-tips-text: #3a5068;
+  --tag-artist: #b86b62;
+  --tag-artist-bg: #f5e9e7;
+  --tag-artist-text: #6b4038;
 }
 
 *,
